@@ -1,0 +1,104 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            BA B1 = new BA();
+            BA B2 = new BA();
+            BA B3 = new BA();
+            B1.setId(10);
+            B1.setName("MENA");
+            B1.setBalance(1000);
+            Console.WriteLine(B1.getId() + ' ' + B1.getName() + ' ' + B1.getBalance());
+            B2.setId(20);
+            B2.setName("SEMON");
+            B2.setBalance(2000);
+            Console.WriteLine(B2.getId() + ' ' + B2.getName() + ' ' + B2.getBalance());
+            B3.setId(30);
+            B3.setName("ERENY");
+            B3.setBalance(3000);
+            B3.PRINT();
+
+
+            Console.WriteLine("/////////////////////////////");
+
+            complex c1=new complex();
+            c1.setReal(10);
+            c1.setImg(-30);
+            c1.print();
+
+            Console.WriteLine("/////////////////////////////");
+
+
+            student s1=new student();
+            s1.setId(1);
+            s1.setName("maro");
+            s1.setGrade(80 );
+            s1.PRINT();
+        }
+    }
+
+    class BA
+    {
+        int id;
+        string name;
+        float balance;
+        public void setId(int _id) { id = _id; }
+        public void setName(string _name) { name = _name; }
+        public void setBalance(float _balance) { balance = _balance; }
+
+        public int getId() { return id; }
+
+        public String getName() { return name; }
+        public float getBalance() { return balance; }
+        public void PRINT()
+        {
+            Console.WriteLine(id);
+            Console.WriteLine(name);
+            Console.WriteLine(balance);
+        }
+    }
+    class complex
+    {
+        int img;
+        int real;
+        public void setImg(int _img) { img = _img; }
+        public void setReal(int _real) { real = _real; }
+        public int getImg() { return img; }
+        public int getReal() { return real; }
+        public void print()
+        {
+            if (img>0)
+            {
+                Console.WriteLine($"{real}+{img}j");
+            }else if (img < 0) { Console.WriteLine($"{real}{img}j"); }
+            else { Console.WriteLine(real); }
+           
+        }
+    }
+    class student
+    {
+        int id;
+        string name;
+        float grade;
+        public void setId(int _id) { id = _id; }
+        public void setName(string _name) { name = _name; }
+        public void setGrade(float _balance) { grade = _balance; }
+
+        public int getId() { return id; }
+
+        public String getName() { return name; }
+        public float getGrade() { return grade; }
+        public void PRINT()
+        {
+            Console.WriteLine(id);
+            Console.WriteLine(name);
+            Console.WriteLine(grade);
+        }
+    }
+}
+
