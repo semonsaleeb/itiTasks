@@ -1,0 +1,113 @@
+using System;
+using System.Linq;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // task1();
+            // task2();
+            task3();
+            //  task4();
+            Console.ReadKey();
+        }
+
+
+
+
+
+
+
+
+        public static void task1()
+        {
+            int[] num = new int[5];
+            int sum = 0;
+            int number = 0;
+            int maximum = 0;
+            int minimum = 0;
+            for (int i = 0; i < num.Length; i++)
+            {
+                num[i] = int.Parse(Console.ReadLine());
+                sum += num[i];
+            }
+
+            Array.Sort(num);
+            // Console.WriteLine(num);
+            Console.WriteLine("minumam =" + num[0]);
+            Console.WriteLine("maximum =" + num[num.Length - 1]);
+            Console.WriteLine($"sumation ={sum}");
+
+        }
+        public static void task2()
+        {
+            int[] mynum = new int[5];
+            int i ;
+            for ( i = 0; i < mynum.Length; i++)
+            {
+                mynum[i] = int.Parse(Console.ReadLine());
+                
+            }
+            
+            
+           
+            for (int m = 0; m < mynum.Length; m++)
+            {
+                for (int j = m+1; j > mynum.Length; j++)
+                {
+                   
+                    if (mynum[m] == mynum[j])
+                    {
+                       Console.WriteLine("j");
+                    }
+                }
+            }
+            //for (int i = 0; i < mynum.Length; i++)
+            //{
+            //    for (int j = mynum.Length; j >=0 ; j--)
+            //    {
+
+            //        if (mynum[i] == mynum[j])
+            //        {
+            //            Console.WriteLine((j - i) + 1);
+            //        }
+            //    }
+            //}
+        }
+      
+        public static void task3()
+        {
+            string word = Console.ReadLine();
+            string[] character = new string[word.Length];
+            int counter = 1;
+            for (int i =0; i <character.Length; i++)
+            {
+                character[i] = word.Substring(counter, 1);
+               // int x = int.Parse(character[i]);
+                if (character[i]=="1")
+                {
+                    counter++;
+                }
+
+                
+            }
+            Console.WriteLine(counter);
+        
+    
+    }
+            public static void task4()
+        {
+            string word = Console.ReadLine();
+            string[] character = new string[word.Length];
+            int counter = 0;
+            for (int i = character.Length - 1; i >= 0; i--)
+            {
+               character[i] = word.Substring(counter, 1);
+                counter++;
+}
+            Console.Write(string.Join("",character));
+        }
+        }
+    } 
